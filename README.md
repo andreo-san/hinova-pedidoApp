@@ -56,7 +56,6 @@ Para rodar o projeto localmente com Docker Compose:
   - Usuário: `guest`  
   - Senha: `guest`
 
-> Certifique-se de que as portas `8080` e `15672` estejam livres no seu sistema antes de executar o projeto.
 ---
 
 Contato
