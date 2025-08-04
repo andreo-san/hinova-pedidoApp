@@ -2,7 +2,7 @@
 
 Desafio técnico.
 
-Este projeto implementa um módulo de pedidos com uso de mensageria, seguindo princípios de **POO**, **SOLID** e **Arquitetura Hexagonal**, utilizando **Java + Spring Boot + RabbitMQ**.
+Este projeto implementa um módulo de pedidos com uso de mensageria.
 
 ---
 
