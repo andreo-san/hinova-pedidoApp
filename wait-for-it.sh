@@ -1,6 +1,5 @@
 #!/usr/bin/env bash
 # wait-for-it.sh from https://github.com/vishnubob/wait-for-it
-# Simplificado para nosso uso
 
 host="$1"
 shift
