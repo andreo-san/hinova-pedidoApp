@@ -26,7 +26,7 @@ Para rodar o projeto localmente com Docker Compose:
 1. **Clone o repositório:**
    ```bash
    git clone https://github.com/andreo-san/hinova-pedidoApp.git
-   cd PedidoApp
+   cd hinova-pedidoApp
    ```
 
 2. **Gere o build da aplicação:**
