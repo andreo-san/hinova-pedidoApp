@@ -27,7 +27,8 @@ public class PedidoController {
     @PostMapping
     public ResponseEntity<Pedido> createOrder(@RequestBody Pedido pedido) {
         Pedido created = service.createOrder(pedido);
-        return ResponseEntity.status(HttpStatus.CREATED).body(created); // 201 Created
+        return ResponseEntity.status(HttpStatus.CREATED).body(created);
     }
 
 }
+
