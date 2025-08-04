@@ -1,0 +1,43 @@
+version: '3.9'
+
+services:
+  app:
+    build: .
+    container_name: pedido_app
+    ports:
+      - "8080:8080"
+    depends_on:
+      - rabbitmq
+      - db
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://db:3306/pedidodb
+      SPRING_DATASOURCE_USERNAME: root
+      SPRING_DATASOURCE_PASSWORD: root
+      SPRING_RABBITMQ_HOST: rabbitmq
+    networks:
+      - pedido-network
+
+  db:
+    image: mysql:8.0
+    container_name: mysql_pedido
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: pedidodb
+    ports:
+      - "4406:3306"
+    networks:
+      - pedido-network
+
+  rabbitmq:
+    image: rabbitmq:3-management
+    container_name: pedido-rabbitmq
+    ports:
+      - "5672:5672"
+      - "15672:15672"
+    networks:
+      - pedido-network
+
+networks:
+  pedido-network:
+    driver: bridge
