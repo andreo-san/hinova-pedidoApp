@@ -15,8 +15,7 @@ public class PedidoAppApplication {
 
 		// FORÇA A EXECUÇÃO DO AMQP ADMIN
 		AmqpAdmin admin = context.getBean(AmqpAdmin.class);
-		System.out.println("[✔] Forçando declaração de beans no RabbitMQ...");
-		admin.initialize();  // força criação dos exchanges, queues e bindings
+		admin.initialize();
 	}
 
 }
